@@ -8,6 +8,7 @@ import {
 import { format } from 'date-fns';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { useAuth0 } from '@auth0/auth0-react';
+import { BackgroundGradientAnimation } from './components/ui/background-gradient-animation';
 
 type Message = {
   id: string;
@@ -182,25 +183,27 @@ function App() {
 
       {/* Hero Section for Home */}
       {!isChatOpen && (
-        <section className="relative py-20 px-4 text-center">
-          <div className="max-w-3xl mx-auto">
-            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              Your Mind's Best Companion
-            </h1>
-            <p className="text-lg text-gray-600 mb-8">
-              Experience personalized therapy and support through AI-powered conversations.
-            </p>
-            <button
-              onClick={() => {
-                setIsChatOpen(true);
-                setCurrentView('chat');
-              }}
-              className="px-6 py-3 bg-indigo-500 text-white rounded-full font-semibold hover:bg-indigo-600 transition-all"
-            >
-              Check Your Mood
-            </button>
-          </div>
-        </section>
+        <BackgroundGradientAnimation>
+          <section className="relative py-20 px-4 text-center">
+            <div className="max-w-3xl mx-auto">
+              <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                Your Mind's Best Companion
+              </h1>
+              <p className="text-lg text-white mb-8">
+                Experience personalized therapy and support through AI-powered conversations.
+              </p>
+              <button
+                onClick={() => {
+                  setIsChatOpen(true);
+                  setCurrentView('chat');
+                }}
+                className="px-6 py-3 bg-indigo-500 text-white rounded-full font-semibold hover:bg-indigo-600 transition-all"
+              >
+                Check Your Mood
+              </button>
+            </div>
+          </section>
+        </BackgroundGradientAnimation>
       )}
 
       {/* Views for Chat, History, etc. */}
