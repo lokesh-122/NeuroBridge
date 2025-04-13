@@ -180,31 +180,32 @@ function App() {
           </div>
         </div>
       </nav>
-
       {/* Hero Section for Home */}
       {!isChatOpen && (
         <BackgroundGradientAnimation>
           <section className="relative py-20 px-4 text-center">
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-3xl mx-auto relative">
               <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                 Your Mind's Best Companion
               </h1>
               <p className="text-lg text-white mb-8">
                 Experience personalized therapy and support through AI-powered conversations.
               </p>
-              <button
-                onClick={() => {
-                  if (!isAuthenticated) {
-                    loginWithRedirect();
-                  } else {
-                    setIsChatOpen(true);
-                    setCurrentView('chat');
-                  }
-                }}
-                className="px-6 py-3 bg-indigo-500 text-white rounded-full font-semibold hover:bg-indigo-600 transition-all"
-              >
-                {isAuthenticated ? 'Start Chatting' : 'Log In to Chat'}
-              </button>
+              <div className="relative z-50">
+                <button
+                  onClick={() => {
+                    if (!isAuthenticated) {
+                      loginWithRedirect();
+                    } else {
+                      setIsChatOpen(true);
+                      setCurrentView('chat');
+                    }
+                  }}
+                  className="px-6 py-3 bg-indigo-500 text-white rounded-full font-semibold hover:bg-indigo-600 transition-all"
+                >
+                  {isAuthenticated ? 'Start Chatting' : 'Log In to Chat'}
+                </button>
+              </div>
             </div>
           </section>
         </BackgroundGradientAnimation>
