@@ -194,12 +194,16 @@ function App() {
               </p>
               <button
                 onClick={() => {
-                  setIsChatOpen(true);
-                  setCurrentView('chat');
+                  if (!isAuthenticated) {
+                    loginWithRedirect();
+                  } else {
+                    setIsChatOpen(true);
+                    setCurrentView('chat');
+                  }
                 }}
                 className="px-6 py-3 bg-indigo-500 text-white rounded-full font-semibold hover:bg-indigo-600 transition-all"
               >
-                Check Your Mood
+                {isAuthenticated ? 'Start Chatting' : 'Log In to Chat'}
               </button>
             </div>
           </section>
