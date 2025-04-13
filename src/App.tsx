@@ -348,7 +348,7 @@ function App() {
       )}
 
       {/* Footer */}
-      <footer className="bg-white/80 backdrop-blur-md py-8">
+      <footer className="fixed bottom-0 left-0 right-0 bg-white/80 backdrop-blur-md py-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center gap-2 mb-4 md:mb-0">
