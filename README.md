@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.postimg.cc/7LZw9r0k/neurobridge-banner.png" alt="NeuroBridge Banner" width="100%" />
+  <img src="https://i.postimg.cc/qRgsY6Jc/8e7a4822-8717-4970-b4ad-838423bf6abe.png" alt="NeuroBridge Banner" width="100%" />
 </p>
 
 <h1 align="center">🧠 NeuroBridge - Personalized Therapy Chat for Neurodivergent Users</h1>
